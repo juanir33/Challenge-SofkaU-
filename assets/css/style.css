@@ -1,0 +1,45 @@
+*{
+    transition: all 0.5;
+}
+body{
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(139, 139, 85);
+}
+.game_container{
+    max-width: 650px;
+    margin: 0 auto;
+    padding:  2em 0 0;
+}
+.game_player{
+    margin: 0 0 3em 0;
+}
+.game_question{
+    width: 100%;
+
+}
+.game_answer{
+    width: 90%;
+}
+.game_answer  > button{
+    color: #000;
+    width: 100%;
+    padding: 3px;
+    margin: 0.9em 0 0 0;
+    background-color: #fff;
+    
+}
+.game_answer  > button:hover,
+.game_answer  > button:focus
+{
+    transform: scale(1.04);
+    background-color: cadetblue;
+    box-shadow: none;
+}
+.correct{
+    background-color: chartreuse;
+}
