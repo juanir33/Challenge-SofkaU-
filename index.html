@@ -14,7 +14,7 @@
         <div class="game_container d-flex flex-column justify-content-space-between align-items-center">
             <div class="game_player d-flex justify-content-between w-100" >
                 <div><h6 id="player_name">player name</h6></div>
-                <div><h5 id="player_price">price</h5></div>
+                <div><h5 id="player_prize">prize</h5></div>
                 <div><h6 id="player_round">round</h6></div>
             </div>
             <div class="game_question">
@@ -27,18 +27,18 @@
                   </div>
             </div>
             <div class="game_answer">
-                <button class="btn btn-primary" id="button_1"></button>
+                <button class="btn btn-primary" onclick="start(event)"id="button_1"></button>
             </div>
             <div class="game_answer">
-                <button class="btn btn-primary" id="button_2"></button>
+                <button class="btn btn-primary" onclick="playerSelect(event)"id="button_2"></button>
             </div>
             <div class="game_answer">
-                <button class="btn btn-primary" id="button_3"></button>
+                <button class="btn btn-primary" onclick="playerSelect(event)"id="button_3"></button>
             </div>
             <div class="game_answer">
-                <button class="btn btn-primary" id="button_4"></button>
+                <button class="btn btn-primary" onclick="playerSelect(event)"id="button_4"></button>
             </div>
-            <button class="btn btn-success w-25" ></button>
+            <button class="btn btn-success w-25" onclick="nextRound()" id="next">Siguiente pregunta</button>
         </div>
 
     </div>

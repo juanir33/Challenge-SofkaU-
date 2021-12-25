@@ -41,5 +41,12 @@ body{
     box-shadow: none;
 }
 .correct{
-    background-color: chartreuse;
+    background-color: chartreuse !important;
+}
+.error{
+    background-color: brown !important;
+}
+#next{
+    background-color: cyan;
+    color: #000;
 }
