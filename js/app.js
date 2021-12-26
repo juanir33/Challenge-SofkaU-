@@ -348,8 +348,11 @@ const swalBoot = Swal.mixin({
   allowEscapeKey: false,
   allowOutsideClick: false,
 });
+
+//Se logue el jugador
 window.location.addEventListener("onload", log());
 function log() {
+   
   let players = getPlayer();
   Swal.fire({
     title: "Registra tu nombre completo",
@@ -358,6 +361,12 @@ function log() {
     input: "text",
     inputLabel: "Tu nombre",
     inputPlaceholder: "Nombre y Apellido",
+    inputValidator: (value) => {
+      if (!value) {
+        return 'Introduce tu nombre!'
+      }
+    }
+    
   }).then((result) => {
     let playerName = Swal.getInput().value.toUpperCase();
 
@@ -366,11 +375,13 @@ function log() {
       players.push(newPlayer);
       data = JSON.stringify(players);
       localStorage.setItem("players", data);
+      
       start();
     }
   });
 }
 
+//obtencion de datos 
 function getPlayer() {
   let usersLs = localStorage.getItem("players");
   let users = JSON.parse(usersLs);
@@ -515,7 +526,7 @@ function gameOver() {
     }
   });
 }
-//En esta funcione generamos la validacion de la pregunta elegida por el jugador
+//En esta funcion generamos la validacion de la pregunta elegida por el jugador
 //Otorga premio y habilita siguiente, o termina el juego
 function playerSelect(event) {
   selectBtn = { value: event.target.outerText, id: event.target.id };

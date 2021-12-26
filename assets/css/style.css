@@ -55,3 +55,6 @@ body{
     width: 100%;
     height: 200px;
 }
+.none{
+    display: none;
+}
