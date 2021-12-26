@@ -7,8 +7,11 @@ body{
 
 .container{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgb(139, 139, 85);
+}
+.ranking_container{
+    height: 100vh;
 }
 .game_container{
     max-width: 650px;
